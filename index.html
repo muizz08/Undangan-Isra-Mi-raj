@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Undangan Isra Mi'raj</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+
+</head>
+
+<body>
+    <div class="falling-leaves">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <audio id="bgMusic" loop>
+      <source src="audio/Qosidah Fii Rojab (mp3cut.net).mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio> 
+
+    <section id="buka-undangan" class="opening mx-auto vh-100 align-items-center justify-content-center text-center">
+        <div class="opening-inner">
+            <p class="small">Kepada Yth.</p>
+            <h4 class="nama-tamu">Santriwan/Santriwati/Alumni
+            Masjid Jami Al-Mubarokah
+            </h4>
+            <h1 class="title">
+                Peringatan Isra Mi'raj <br /><span class="thin">Nabi Muhammad SAW</span>
+            </h1>
+            <p class="date">1447 H / 2026 M</p>
+            <button class="btn-open" id="btnOpen">Buka Undangan</button>
+            <p class="hint"><b>klik untuk membuka undangan</b></p>
+        </div>  
+    </section>
+
+    <main id="main" class="hidden">
+
+        <section id="undangan" class="undangan-section text-center">
+            <div class="cover-heading container text-center">
+                <div class="decor-top">
+                    <span>✦✦✦</span>
+                </div>
+                <h2 class="gold animated-heading">Undangan</h2>
+            </div>
+            <p class="subtitle">Peringatan Isra Mi'raj Nabi Muhammad SAW — 1447 H / 2026 M</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="custom-info d-flex flex-column flex-md-row justify-content-center align-items-stretch gap-4">
+                        <div class="info-box">
+                            <h4 class="gold small-title">Tanggal & Waktu</h4>
+                            <p>
+                                27 Rajab 1447 H<br />
+                                Jum'at, 30 Januari 2026<br />
+                                **19:00 WIB – Selesai**
+                            </p>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="gold small-title">Tempat</h4>
+                            <p>
+                                **Masjid Jami Al-Mubarokah**<br />
+                                Jl. Parakan Saat II – Kota Bandung<br />
+                                Arcamanik – Cisaranten Endah
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="https://www.google.com/maps/place/Masjid+Jami+Al+Mubarokah/@-6.9355427,107.6660601,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e802a64757bb:0x93d22230fca5d5ea!8m2!3d-6.935548!4d107.668635!16s%2Fg%2F11b6cbc1j_?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-map-link">Lihat Lokasi di Google Maps</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section-cover text-center">
+                <div class="cover-inner container text-center justify-content-center">
+                    <h2 class="gold text-center">Hari Yang Dinanti</h2>
+                    <div class="timer mx-auto" aria-hidden="true">
+                        <div class="timer-item">
+                            <div id="days">00</div>
+                            <span>Hari</span>
+                        </div>
+                        <div class="timer-item">
+                            <div id="hours">00</div>
+                            <span>Jam</span>
+                        </div>
+                        <div class="timer-item">
+                            <div id="minutes">00</div>
+                            <span>Menit</span>
+                        </div>
+                        <div class="timer-item">
+                            <div id="seconds">00</div>
+                            <span>Detik</span>
+                        </div>
+                    </div>
+                    <p class="caption-elegant">
+                        <span>Dihadiri oleh</span><br>
+                        <b>Al Habib Abdurrahman Al Kaff</b><br>
+                        <img src="img/habib dalang.png" alt="mubaligh" class="img-fluid w-75 h-50 mx-auto d-block mt-4 ">
+                        <span class="text mt-2">dan</span>
+                        <b>Qori Ust. Tepy Ariyansyah</b>
+                        <img src="img/ust teppy3.png" alt="mubaligh" class="img-fluid w-50 h-25 mx-auto d-block mt-4 ">
+                    </p>
+                </div>
+            </section>
+            
+            <div class="container text-center">
+                <h3 class="gold mb-4" style="font-family: var(--font-elegant);">Rangkaian Acara Selama 3 Hari</h3>
+
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-ev ">
+                            <h4>Tabligh Akbar</h4>
+                            <p>
+                                **Jumat, 30 Januari 2026**<br>
+                                19:00 WIB – Selesai
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-ev">
+                            <h4>Kreasi Seni Imtihan</h4>
+                            <p>
+                                **Sabtu, 31 Januari 2026**<br>
+                                19:00 WIB – Selesai
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-ev">
+                            <h4>Penampilan Gambus</h4>
+                            <p>
+                                **Minggu, 1 Februari 2026**<br>
+                                19:00 WIB – Selesai
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-gallery py-5">
+            <div class="container">
+                <h3 class="gold mb-5 text-center" style="font-family: var(--font-elegant);">Dokumentasi Acara Sebelumnya</h3>
+
+                <div class="row g-3">
+
+                    <div class="col-6 col-sm-6 col-md-3 gallery-item fade-up">
+                        <div class="gallery-card mt-3 ">
+                            <img src="img/foto 1.jpg" alt="Foto 1">
+                            <div class="overlay"><p>Imtihan</p></div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-3 gallery-item fade-up">
+                        <div class="gallery-card mt-3">
+                            <img src="img/foto2.jpg" alt="Foto 2">
+                            <div class="overlay"><p>Imtihan</p></div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-3 gallery-item fade-up">
+                        <div class="gallery-card mt-3 ">
+                            <img src="img/foto3.jpg" alt="Foto 3">
+                            <div class="overlay"><p>Imtihan</p></div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-3 gallery-item fade-up">
+                        <div class="gallery-card mt-3">
+                            <img src="img/foto4.jpg" alt="Foto 4">
+                            <div class="overlay"><p>Santri</p></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-fluid ">
+                <div class="gallery-slider d-flex">
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/maulid2.jpeg" alt="Foto 5">
+                        <div class="overlay"><p>Maulid</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto6.jpg" alt="Foto 6">
+                        <div class="overlay"><p>pembacaan surat pendek</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto7.jpg" alt="Foto 7">
+                        <div class="overlay"><p>kreasi Tari Santri</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto8.jpg" alt="Foto 8">
+                        <div class="overlay"><p>Penampilan Shalawat</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto10.jpg" alt="Foto 10">
+                        <div class="overlay"><p>Imtihan</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto12.jpg" alt="Foto 12">
+                        <div class="overlay"><p>SantriWati</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto13.jpg" alt="Foto 13">
+                        <div class="overlay"><p>Imtihan</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto13.jpg" alt="Foto 14">
+                        <div class="overlay"><p>Imtihan</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto14.jpg" alt="Foto 15">
+                        <div class="overlay"><p>Imtihan</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto15.jpg" alt="Foto 16">
+                        <div class="overlay"><p>Imtihan</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto16.jpg" alt="Foto 17">
+                        <div class="overlay"><p>Imtihan</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto17.jpg" alt="Foto 18">
+                        <div class="overlay"><p>Pembacaan Nadhom</p></div>
+                    </div>
+                     <div class="slide gallery-card mt-2">
+                        <img src="img/maulid.jpeg" alt="Foto 19">
+                        <div class="overlay"><p>Maulid</p></div>
+                    </div>
+                    <div class="slide gallery-card mt-2">
+                        <img src="img/foto5.jpg" alt="Foto 19">
+                        <div class="overlay"><p>Panitia</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-penutup">
+            <div class="penutup-bg" style="background-image: url('img/bg-penutup.jpg')"></div>
+            <div class="penutup-inner container text-center">
+                <h2 class="gold">༺Terima Kasih༻</h2>
+                <p class="closing-desc">
+                    Kami mengundang seluruh jamaah & alumni untuk hadir memeriahkan
+                    acara Isra Mi'raj & Reuni Akbar 1447H / 2026M. Sampai jumpa, semoga
+                    sehat selalu.
+                </p>
+
+                <div class="donasi">
+                    <p>Donasi dapat dikirim ke rekening:</p>
+                    <p class="donasi-acc">BCA 4372245771 — a/n Esri Permatasari</p>
+                    <p>Konfirmasi: 0895365878948</p>
+                </div>
+
+                <p class="uf-title">Sosial Media Kami</p>
+                <div class="uf-sosmed">
+                    <a href="https://www.instagram.com/sirrulhaddad_almubarokah" target="_blank" class="uf-item">
+                        <img src="img/ig.png" alt="Instagram" class="uf-icon">
+                        <span>@sirrulhaddadalmubarokah</span>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@sirrulhaddad_" target="_blank" class="uf-item">
+                        <img src="img/tiktok.png" alt="TikTok" class="uf-icon">
+                        <span>@sirrulhaddad_</span>
+                    </a>
+                </div>
+                
+                <p class="uf-copy">
+                    Panitia Peringatan Isra Mi'raj 1447 H — Masjid Jami Al-Mubarokah
+                </p>
+            </div>
+            <div class="lightbox" id="lightbox-modal">
+                <button class="lb-close" id="lbCloseBtn">×</button>
+                <img src="" alt="Gambar Galeri" class="lb-img" id="lightbox-img">
+                <p class="lb-caption" id="lightbox-caption"></p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

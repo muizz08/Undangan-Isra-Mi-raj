@@ -1,0 +1,631 @@
+:root {
+    --color-black: #1b1b2f;      /* Ungu gelap untuk background */
+    --color-white: #e0e0e0;      /* Putih gading untuk teks */
+    --color-gold: #cfa15b;       /* Emas lembut untuk aksen */
+    --color-light-gold: #f5deb3; /* Emas lebih terang untuk highlight */
+    --font-primary: 'Poppins', sans-serif;
+    --font-elegant: 'Playfair Display', serif;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif 'Bitter', serif; 
+    background: radial-gradient(circle at top, #94B4C1, #F3E8DF 80%) fixed;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Teks umum */
+h1, h2, h3, h4, h5, h6, p, span, b {
+    color: var(--color-white);
+}
+
+/* Judul / Section Title */
+h1, h2, h3, h4, .gallery-title, .caption-elegant {
+    font-family: var(--font-elegant);
+}
+
+/* Paragraf / Body Text */
+p, span, li, .overlay-text {
+    font-family: var(--font-primary);
+}
+
+
+/* Link / aksen */
+.gold, .accent {
+    color: var(--color-gold);
+}
+
+/* Section gradient halus */
+section {
+    background: linear-gradient(
+        180deg,
+        rgba(207,161,91,0.03),
+        rgba(27,27,47,0.6)
+    );
+}
+
+/* Kelas utilitas warna */
+.gold { color: var(--color-gold) !important; }
+.white-text { color: var(--color-white) !important; }
+
+/* =======================================================
+* OPENING SECTION (COVER AWAL)
+* ======================================================= */
+.opening {
+    /* Ganti 'img/bg-opening.jpg' dengan path gambar Anda */
+    background: var(--color-black) url('img/bgbaru.jpg') center center no-repeat;
+    background-size: cover;
+    top: 0; left: 0;
+    width: 100%;
+    /* Gunakan min-height: 100vh untuk memastikan opening cover menutupi seluruh layar di mobile */
+    min-height: 100vh; 
+    z-index: 1050;
+    transition: opacity 1.5s ease-in-out;
+    /* Tambahkan flexbox untuk centering konten di tengah layar */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Pastikan teks di tengah */
+    position: relative; /* Penting untuk pseudo-element */
+}
+.opening::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.7); 
+}
+.opening-inner {
+    position: relative;
+    z-index: 10;
+    /* Ubah width menjadi max-width yang lebih fleksibel */
+    max-width: 90%; 
+    width: 350px; /* Tetapkan lebar maksimal yang nyaman untuk mobile */
+    margin: auto;
+    padding: 20px;
+    animation: fadeUp 1.2s ease-out forwards;
+}
+.opening .small {
+    font-size: 1rem; /* Sedikit dikecilkan untuk mobile */
+    margin-bottom: 5px;
+}
+.opening .nama-tamu {
+    font-size: 1.4rem; /* Sedikit dikecilkan untuk mobile */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.opening .title {
+    font-family: var(--font-elegant);
+    font-size: 2.2rem; /* Ukuran yang responsif untuk mobile */
+    font-weight: 700;
+    color: var(--color-light-gold);
+    line-height: 1.2;
+}
+.opening .title .thin {
+    font-weight: 400;
+    display: block;
+    font-size: 1.5rem; /* Ukuran yang responsif untuk mobile */
+}
+.opening .date {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.btn-open {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-open:hover {
+    background-color: var(--color-light-gold);
+    color: var(--color-black);
+}
+.opening .hint {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Utility untuk menyembunyikan elemen utama */
+.hidden { display: none; }
+
+.lock-scroll { 
+    overflow: hidden;
+    height: 100vh;}
+
+/* =======================================================
+* MAIN CONTENT
+* ======================================================= */
+main {
+    padding-bottom: 10px;
+}
+
+section {
+    padding: 40px 15px; /* Tambahkan padding horizontal agar konten tidak menempel di tepi */
+}
+
+.undangan-section {
+
+    text-align: center; /* Rata tengah konten section */
+}
+
+.undangan-section h2 {
+    font-family: var(--font-elegant);
+    font-size: 2rem; /* Disesuaikan untuk mobile */
+    margin-bottom: 10px;
+    animation: fadeUp 1.5s ease-out;
+}
+
+.undangan-section .subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Info Box (Tanggal & Tempat) */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px; /* Disesuaikan */
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.info-box .small-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: var(--font-elegant);
+}
+.info-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Tombol Google Maps */
+.btn-map-link {
+    display: block;
+    max-width: 90%; /* Lebih responsif */
+    width: 280px; /* Tetapkan lebar maksimum */
+    margin: 0 auto; /* Tengah */
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+.btn-map-link:hover {
+    background-color: var(--color-light-gold);
+}
+
+/* Countdown Timer */
+.section-cover {
+    padding: 20px 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;   /* Biar item disusun dari atas ke bawah */
+    justify-content: center;  /* Center vertical spacing */
+    align-items: center;       /* Center horizontal */
+    text-align: center;        /* Center text */
+
+    gap: 20px;                 /* Jarak antar elemen */
+    flex-wrap: nowrap;         /* Tidak perlu wrap untuk kolom */
+
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    animation: fadeUp 1.5s ease-out;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%; /* Agar timer memenuhi lebar */
+    flex-wrap: wrap;
+}
+.timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tambahkan lebar agar item memiliki ruang yang cukup */
+    width: 22%; 
+    min-width: 60px;
+    animation: timerPop 0.8s ease-out;
+}
+.timer-item div {
+    font-family: var(--font-elegant);
+    font-size: 2rem; /* Disesuaikan untuk mobile */
+    font-weight: 700;
+    color: var(--color-light-gold);
+    line-height: 1;
+        animation: goldPulse 2.5s ease-in-out infinite alternate;
+
+}
+.timer-item span {
+    font-size: 0.8rem; /* Disesuaikan untuk mobile */
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+/* Caption Elegant (Dihadiri oleh) */
+.caption-elegant {
+    font-family: var(--font-elegant);
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+.caption-elegant span {
+    font-weight: 400;
+    display: block;
+}
+.caption-elegant b {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    display: block;
+}
+.caption-elegant .text {
+    font-style: italic;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Card Events */
+.card-ev {
+    background-color: rgba(255, 255, 255, 0.05); /* semi-transparan */
+    padding: 25px;
+    border-radius: 25px; /* lebih bulat */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* shadow lebih lembut */
+    backdrop-filter: blur(8px); /* efek glassmorphism */
+    -webkit-backdrop-filter: blur(8px); /* safari */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+/* Efek hover */
+.card-ev:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+    .card-ev h4 {
+    font-family: var(--font-elegant);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-light-gold);
+    margin-bottom: 10px;
+}
+.card-ev p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* =======================================================
+* GALERI
+* ======================================================= */
+.section-gallery {
+    position: relative;
+    padding: 60px 15px; /* Padding responsif */
+}
+.gallery-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.1; 
+    background-size: cover !important;
+    background-position: center center !important;
+}
+.gallery-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-family: var(--font-elegant);
+    font-size: 2rem; /* Disesuaikan untuk mobile */
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.gallery-item {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    aspect-ratio: 1 / 1; 
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(184,134,11,0.5);
+  color: #fff;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-elegant);
+  font-size: 1.1rem;
+  text-align: center;
+  transition: opacity 0.4s ease;
+  background: rgba(47, 33, 61, 0.6); 
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gallery card tetap seperti sebelumnya */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 80%;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+  color: #ffc107;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 0 6px rgba(255,193,7,0.7);
+  text-align: center;
+  font-family: var(--font-primary);
+  font-style: italic;
+
+}
+
+.gallery-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-text {
+    color: var(--color-light-gold);
+    text-shadow: 0 0 6px rgba(245,222,179,0.7);
+}
+
+.gallery-slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.gallery-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 80%; /* Lebar slide di HP */
+  scroll-snap-align: start; 
+  border-radius: 15px;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =======================================================
+* PENUTUP / DONASI / SOSMED
+* ======================================================= */
+.section-penutup {
+    position: relative;
+    padding: 60px 15px 20px; /* Padding responsif */
+    text-align: center;
+}
+.penutup-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.15;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+.penutup-inner {
+    position: relative;
+    z-index: 2;
+}
+.section-penutup h2 {
+    font-family: var(--font-elegant);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.closing-desc {
+    font-size: 1rem;
+    max-width: 90%; /* Lebih responsif */
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Donasi */
+.donasi {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 350px;
+    margin: 0 auto 30px;
+    border: 1px solid var(--color-gold);
+}
+.donasi p {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+.donasi-acc {
+    font-size: 1.1rem;
+    color: var(--color-light-gold);
+    font-family: var(--font-elegant);
+    margin-bottom: 10px !important;
+}
+
+/* Footer / Sosmed */
+.uf-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--color-gold);
+}
+.uf-sosmed {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Disesuaikan */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.uf-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.uf-item:hover {
+    color: var(--color-light-gold);
+}
+.uf-icon {
+    width: 20px; /* Disesuaikan */
+    height: 20px;
+    border-radius: 50%;
+}
+.uf-copy {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    padding-bottom: 10px;
+}
+
+/* 1. SOLUSI KEDIPAN PUTIH: Pastikan HTML dan BODY memiliki warna gelap */
+html {
+    /* Mengambil warna tema gelap Anda */
+    background-color: var(--color-black); 
+}
+
+/* 2. LIGHTBOX CSS: Pastikan tersembunyi dan di atas segalanya */
+.lightbox {
+    display: none; /* Awalnya tersembunyi */
+    position: fixed;
+    z-index: 1100; /* Lebih tinggi dari z-index lainnya */
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox.active {
+    display: flex; /* Dipicu oleh JavaScript */
+}
+.lb-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 3px solid var(--color-gold);
+}
+.lb-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: var(--color-white);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1200;
+}
+.lb-caption {
+    position: absolute;
+    bottom: 20px;
+    color: var(--color-white);
+    font-size: 1.1rem;
+    padding: 0 50px;
+    text-align: center;
+}
+

@@ -1,0 +1,90 @@
+/* =======================================================
+   EFEK FALLING LEAVES (DAUN JATUH)
+   ======================================================= */
+
+.falling-leaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.falling-leaves span {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background-image: url('img/daun.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    animation: fall 8s linear infinite;
+    opacity: 0.8;
+}
+
+/* Posisi random */
+.falling-leaves span:nth-child(1) { left: 10%; animation-duration: 7s; animation-delay: 0s; }
+.falling-leaves span:nth-child(2) { left: 20%; animation-duration: 9s; animation-delay: 2s; }
+.falling-leaves span:nth-child(3) { left: 30%; animation-duration: 6s; animation-delay: 1s; }
+.falling-leaves span:nth-child(4) { left: 40%; animation-duration: 8s; animation-delay: 3s; }
+.falling-leaves span:nth-child(5) { left: 50%; animation-duration: 10s; animation-delay: 0s; }
+.falling-leaves span:nth-child(6) { left: 60%; animation-duration: 7s; animation-delay: 1.5s; }
+.falling-leaves span:nth-child(7) { left: 70%; animation-duration: 8s; animation-delay: 2.5s; }
+.falling-leaves span:nth-child(8) { left: 80%; animation-duration: 9s; animation-delay: 1s; }
+.falling-leaves span:nth-child(9) { left: 90%; animation-duration: 6s; animation-delay: 2s; }
+.falling-leaves span:nth-child(10) { left: 95%; animation-duration: 9s; animation-delay: 3s; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+.decorated-heading .ornament {
+  margin-left: 10px;
+  color: #b8860b; /* warna emas */
+  font-size: 1.2rem;
+}
+
+/* =======================================================
+   ANIMASI ELEGAN PREMIUM
+   ======================================================= */
+
+/* Fade naik halus */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in biasa */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Zoom halus */
+@keyframes subtleZoom {
+    0% { opacity: 0; transform: scale(0.92); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Glow emas lembut (tidak norak) */
+@keyframes goldPulse {
+    0% { text-shadow: 0 0 0px var(--color-light-gold); }
+    100% { text-shadow: 0 0 6px rgba(255, 193, 7, 0.4); }
+}
+
+/* Pop kecil untuk countdown */
+@keyframes timerPop {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
